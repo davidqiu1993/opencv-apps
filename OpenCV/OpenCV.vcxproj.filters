@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{ee4caaac-7c6e-4e30-8208-d1658d9eff68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0798ce72-bf71-4572-b489-8e58a77eb533}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Applications">
+      <UniqueIdentifier>{1db1888c-689f-42ea-b97c-c569bdd09787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Applications\AppExample">
+      <UniqueIdentifier>{4f481e57-db5b-4292-a945-46fd471401f9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Applications\App.h">
+      <Filter>Applications</Filter>
+    </ClInclude>
+    <ClInclude Include="Applications\AppExample\AppExample.h">
+      <Filter>Applications\AppExample</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Applications\App.cpp">
+      <Filter>Applications</Filter>
+    </ClCompile>
+    <ClCompile Include="Applications\AppExample\AppExample.cpp">
+      <Filter>Applications\AppExample</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
