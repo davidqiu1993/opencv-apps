@@ -17,6 +17,9 @@
     <Filter Include="Applications\AppExample">
       <UniqueIdentifier>{4f481e57-db5b-4292-a945-46fd471401f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Applications\AppReadImage">
+      <UniqueIdentifier>{d698df0e-8a0f-48b4-8fab-71420e5baa92}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -28,6 +31,9 @@
     <ClInclude Include="Applications\AppExample\AppExample.h">
       <Filter>Applications\AppExample</Filter>
     </ClInclude>
+    <ClInclude Include="Applications\AppReadImage\AppReadImage.h">
+      <Filter>Applications\AppReadImage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -38,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="Applications\AppExample\AppExample.cpp">
       <Filter>Applications\AppExample</Filter>
+    </ClCompile>
+    <ClCompile Include="Applications\AppReadImage\AppReadImage.cpp">
+      <Filter>Applications\AppReadImage</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
