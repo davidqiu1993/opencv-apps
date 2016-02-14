@@ -1,5 +1,5 @@
 /**
-* Example application.
+* AR application.
 *
 * Authors:
 *    - David Qiu (david.qiu@dji.com)
@@ -7,14 +7,14 @@
 * Copyright (C) 2016, David Qiu. All rights Reserved.
 */
 
-#include "AppExample.h"
+#include "AppAR.h"
 #include <conio.h>
 
 
 /**
  * @brief Application entry.
  */
-int AppExample::run(int argc, char* argv[])
+int AppAR::run(int argc, char* argv[])
 {
     cout << "This is an example application." << endl;
     cout << "argc: " << argc << endl;

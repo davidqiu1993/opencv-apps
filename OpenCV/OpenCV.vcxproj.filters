@@ -20,6 +20,12 @@
     <Filter Include="Applications\AppReadImage">
       <UniqueIdentifier>{d698df0e-8a0f-48b4-8fab-71420e5baa92}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Applications\AppWriteVideo">
+      <UniqueIdentifier>{e3ec76f1-8ebe-4f9e-b801-288eb8fc748a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Applications\AppAR">
+      <UniqueIdentifier>{0275b9ef-df27-4731-b478-29534aa77e1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -34,6 +40,12 @@
     <ClInclude Include="Applications\AppReadImage\AppReadImage.h">
       <Filter>Applications\AppReadImage</Filter>
     </ClInclude>
+    <ClInclude Include="Applications\AppWriteVideo\AppWriteVideo.h">
+      <Filter>Applications\AppWriteVideo</Filter>
+    </ClInclude>
+    <ClInclude Include="Applications\AppAR\AppAR.h">
+      <Filter>Applications\AppAR</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -47,6 +59,12 @@
     </ClCompile>
     <ClCompile Include="Applications\AppReadImage\AppReadImage.cpp">
       <Filter>Applications\AppReadImage</Filter>
+    </ClCompile>
+    <ClCompile Include="Applications\AppWriteVideo\AppWriteVideo.cpp">
+      <Filter>Applications\AppWriteVideo</Filter>
+    </ClCompile>
+    <ClCompile Include="Applications\AppAR\AppAR.cpp">
+      <Filter>Applications\AppAR</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

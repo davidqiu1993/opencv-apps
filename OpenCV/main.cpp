@@ -17,6 +17,8 @@ using namespace std;
 #include "Applications/App.h"
 #include "Applications/AppExample/AppExample.h"
 #include "Applications/AppReadImage/AppReadImage.h"
+#include "Applications/AppWriteVideo/AppWriteVideo.h"
+#include "Applications/AppAR/AppAR.h"
 
 
 /**
@@ -24,7 +26,9 @@ using namespace std;
  */
 typedef enum _applicationTag {
     APP_EXAMPLE,
-    APP_READ_IMAGE
+    APP_READ_IMAGE,
+    APP_WRITE_VIDEO,
+    APP_AR
 } applicationTag;
 
 
@@ -89,6 +93,8 @@ int main(int argc, char* argv[])
     map<string, applicationTag> applications;
     applications["AppExample"] = APP_EXAMPLE;
     applications["AppReadImage"] = APP_READ_IMAGE;
+    applications["AppWriteVideo"] = APP_WRITE_VIDEO;
+    applications["AppAR"] = APP_AR;
 
     // Check if the selected application exists
     if (applications.find(appArgv[0]) == applications.end())
@@ -103,6 +109,8 @@ int main(int argc, char* argv[])
     {
     case APP_EXAMPLE: currentApp = new AppExample(); break;
     case APP_READ_IMAGE: currentApp = new AppReadImage(); break;
+    case APP_WRITE_VIDEO: currentApp = new AppWriteVideo(); break;
+    case APP_AR: currentApp = new AppAR(); break;
     default:
         cout << "[ ERROR ] Unexpected application tag." << endl;
         return EXIT_FAILURE;
