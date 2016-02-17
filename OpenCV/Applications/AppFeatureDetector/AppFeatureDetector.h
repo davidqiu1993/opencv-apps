@@ -10,13 +10,16 @@
 #ifndef APP_FEATURE_DETECTOR_H
 #define APP_FEATURE_DETECTOR_H
 
-#include "../App.h";
+#include "../App.h"
 
 
 class AppFeatureDetector : public App
 {
 public:
     int run(int argc, char* argv[]);
+
+private:
+    void readme();
 };
 
 

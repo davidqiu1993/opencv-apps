@@ -10,7 +10,7 @@
 #ifndef APP_WRITE_VIDEO_H
 #define APP_WRITE_VIDEO_H
 
-#include "../App.h";
+#include "../App.h"
 
 
 class AppWriteVideo: public App

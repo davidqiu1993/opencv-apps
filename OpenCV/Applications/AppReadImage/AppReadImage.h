@@ -10,7 +10,7 @@
 #ifndef APP_READ_IMAGE_H
 #define APP_READ_IMAGE_H
 
-#include "../App.h";
+#include "../App.h"
 
 
 class AppReadImage: public App

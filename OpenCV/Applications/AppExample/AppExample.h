@@ -10,7 +10,7 @@
 #ifndef APP_EXAMPLE_H
 #define APP_EXAMPLE_H
 
-#include "../App.h";
+#include "../App.h"
 
 
 class AppExample: public App
