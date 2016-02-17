@@ -26,6 +26,9 @@
     <Filter Include="Applications\AppAR">
       <UniqueIdentifier>{0275b9ef-df27-4731-b478-29534aa77e1b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Applications\AppFeatureDetector">
+      <UniqueIdentifier>{03fa9aab-ad97-4ad7-a9a4-709d94a9d32d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -46,6 +49,9 @@
     <ClInclude Include="Applications\AppAR\AppAR.h">
       <Filter>Applications\AppAR</Filter>
     </ClInclude>
+    <ClInclude Include="Applications\AppFeatureDetector\AppFeatureDetector.h">
+      <Filter>Applications\AppFeatureDetector</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -65,6 +71,9 @@
     </ClCompile>
     <ClCompile Include="Applications\AppAR\AppAR.cpp">
       <Filter>Applications\AppAR</Filter>
+    </ClCompile>
+    <ClCompile Include="Applications\AppFeatureDetector\AppFeatureDetector.cpp">
+      <Filter>Applications\AppFeatureDetector</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
