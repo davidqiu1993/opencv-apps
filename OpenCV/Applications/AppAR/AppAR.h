@@ -16,12 +16,21 @@
 class AppAR: public App
 {
 public:
-    AppAR() : DO_SHOW_INTERNAL_STEP_IMAGES(true), INPUT_FILE_TYPE(1), MAX_PROCESSING_IMAGE_WIDTH(480) { ; }
+    AppAR() :
+        DO_SHOW_INTERNAL_STEP_IMAGES(true),
+        INPUT_FILE_TYPE(1),
+        MAX_PROCESSING_IMAGE_WIDTH(480) { ; }
+
     int run(int argc, char* argv[]);
 
 public:
     const bool DO_SHOW_INTERNAL_STEP_IMAGES;
-    const unsigned int INPUT_FILE_TYPE; // 0 = Image, 1 = Video
+    /*
+    Input File Type:
+    - 0 = Image
+    - 1 = Video
+    */
+    const unsigned int INPUT_FILE_TYPE;
     const unsigned int MAX_PROCESSING_IMAGE_WIDTH;
 
 private:
