@@ -20,7 +20,7 @@ public:
     AppFeatureDetector() :
         FEATURE_TYPE("ORB"),
         MATCHER_TYPE("FlannBased"),
-        DO_SHOW_INTERNAL_STEP_IMAGES(true),
+        DO_SHOW_INTERNAL_STEP_IMAGES(false),
         DO_PRINT_MATCHES(false),
         DO_PRINT_GOOD_MATCHES(false) { ; }
 

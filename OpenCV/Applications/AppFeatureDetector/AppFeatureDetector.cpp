@@ -153,7 +153,7 @@ int AppFeatureDetector::run(int argc, char* argv[])
     printf("Step 4: Calculate the minimum and maximum distances between the matches\n");
     step_clock_start();
 
-    double min_distance = 100;
+    double min_distance = 1000;
     double max_distance = 0;
     for (unsigned int i = 0; i < matches.size(); ++i)
     {
@@ -229,7 +229,40 @@ int AppFeatureDetector::run(int argc, char* argv[])
 
 
     // Step 7: Localize the object
-    //todo
+    printf("Step 7: Localize the object\n");
+    step_clock_start();
+
+    vector<Point2f> corners_object(4);
+    corners_object[0] = cvPoint(0, 0);
+    corners_object[1] = cvPoint(objectImage.cols, 0);
+    corners_object[2] = cvPoint(objectImage.cols, objectImage.rows);
+    corners_object[3] = cvPoint(0, objectImage.rows);
+
+    vector<Point2f> corners_scene(4);
+    perspectiveTransform(corners_object, corners_scene, H);
+
+    step_clock_stop();
+
+    printf("\n");
+
+
+    // Step 8: Draw the detected object in the scene
+    printf("Step 8: Draw the detected object in the scene\n");
+    step_clock_start();
+
+    Mat resultImage;
+    sceneImage.copyTo(resultImage);
+
+    line(resultImage, corners_scene[0], corners_scene[1], cvScalar(0, 255, 0), 4);
+    line(resultImage, corners_scene[1], corners_scene[2], cvScalar(0, 255, 0), 4);
+    line(resultImage, corners_scene[2], corners_scene[3], cvScalar(0, 255, 0), 4);
+    line(resultImage, corners_scene[3], corners_scene[0], cvScalar(0, 255, 0), 4);
+
+    step_clock_stop();
+
+    printf("\n");
+
+    imshow("resultImage", resultImage);
 
 
     cvWaitKey(0);
