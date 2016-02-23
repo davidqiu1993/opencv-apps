@@ -18,14 +18,41 @@ class AppAR: public App
 {
 public:
     AppAR() :
-        DO_SHOW_INTERNAL_STEP_IMAGES(true),
+        FEATURE_TYPE("SIFT"),
+        MATCHER_TYPE("FlannBased"),
+        DO_SHOW_INTERNAL_STEP_IMAGES(false),
+        DO_PRINT_MATCHES(false),
+        DO_PRINT_GOOD_MATCHES(false),
         INPUT_FILE_TYPE(1),
         MAX_PROCESSING_IMAGE_WIDTH(480) { ; }
 
     int run(int argc, char* argv[]);
 
 public:
-    const bool DO_SHOW_INTERNAL_STEP_IMAGES;
+    /*
+    Feature Type:
+    - "FAST"       = FastFeatureDetector
+    - "STAR"       = StarFeatureDetector
+    - "SIFT"       = SIFT (nonfree module)
+    - "SURF"       = SURF (nonfree module)
+    - "ORB"        = ORB
+    - "BRISK"      = BRISK
+    - "MSER"       = MSER
+    - "GFTT"       = GoodFeaturesToTrackDetector
+    - "HARRIS"     = GoodFeaturesToTrackDetector with Harris detector enabled
+    - "Dense"      = DenseFeatureDetector
+    - "SimpleBlob" = SimpleBlobDetector
+    */
+    const string FEATURE_TYPE;
+    /*
+    Matcher Type:
+    - "BruteForce"            = Brute Force L2 Matcher
+    - "BruteForce-L1"         = Brute Force L1 Matcher
+    - "BruteForce-Hamming"    = Brute Force Hamming Matcher
+    - "BruteForce-Hamming(2)" = Brute Force Hamming 2 Matcher
+    - "FlannBased"            = Flann Based Matcher
+    */
+    const string MATCHER_TYPE;
     /*
     Input File Type:
     - 0 = Image
@@ -33,6 +60,9 @@ public:
     */
     const unsigned int INPUT_FILE_TYPE;
     const unsigned int MAX_PROCESSING_IMAGE_WIDTH;
+    const bool DO_SHOW_INTERNAL_STEP_IMAGES;
+    const bool DO_PRINT_MATCHES;
+    const bool DO_PRINT_GOOD_MATCHES;
 
 private:
     void process(const Mat& img_object, const Mat& img_scene);
