@@ -89,6 +89,7 @@
     <ClCompile Include="Applications\AppExample\AppExample.cpp" />
     <ClCompile Include="Applications\AppFeatureDetector\AppFeatureDetector.cpp" />
     <ClCompile Include="Applications\AppReadImage\AppReadImage.cpp" />
+    <ClCompile Include="Applications\AppRoadDetection\AppRoadDetection.cpp" />
     <ClCompile Include="Applications\AppWriteVideo\AppWriteVideo.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -98,6 +99,7 @@
     <ClInclude Include="Applications\AppExample\AppExample.h" />
     <ClInclude Include="Applications\AppFeatureDetector\AppFeatureDetector.h" />
     <ClInclude Include="Applications\AppReadImage\AppReadImage.h" />
+    <ClInclude Include="Applications\AppRoadDetection\AppRoadDetection.h" />
     <ClInclude Include="Applications\AppWriteVideo\AppWriteVideo.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>

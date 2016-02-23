@@ -20,6 +20,7 @@ using namespace std;
 #include "Applications/AppWriteVideo/AppWriteVideo.h"
 #include "Applications/AppAR/AppAR.h"
 #include "Applications/AppFeatureDetector/AppFeatureDetector.h"
+#include "Applications/AppRoadDetection/AppRoadDetection.h"
 
 
 /**
@@ -30,7 +31,8 @@ typedef enum _applicationTag {
     APP_READ_IMAGE,
     APP_WRITE_VIDEO,
     APP_AR,
-    APP_FEATURE_DETECTOR
+    APP_FEATURE_DETECTOR,
+    APP_ROAD_DETECTION
 } applicationTag;
 
 
@@ -98,6 +100,7 @@ int main(int argc, char* argv[])
     applications["AppWriteVideo"] = APP_WRITE_VIDEO;
     applications["AppAR"] = APP_AR;
     applications["AppFeatureDetector"] = APP_FEATURE_DETECTOR;
+    applications["AppRoadDetection"] = APP_ROAD_DETECTION;
 
     // Check if the selected application exists
     if (applications.find(appArgv[0]) == applications.end())
@@ -115,6 +118,7 @@ int main(int argc, char* argv[])
     case APP_WRITE_VIDEO: currentApp = new AppWriteVideo(); break;
     case APP_AR: currentApp = new AppAR(); break;
     case APP_FEATURE_DETECTOR: currentApp = new AppFeatureDetector(); break;
+    case APP_ROAD_DETECTION: currentApp = new AppRoadDetection(); break;
     default:
         cout << "[ ERROR ] Unexpected application tag." << endl;
         return EXIT_FAILURE;
