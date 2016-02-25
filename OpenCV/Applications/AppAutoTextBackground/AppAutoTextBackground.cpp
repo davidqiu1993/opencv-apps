@@ -10,6 +10,8 @@
 #include "AppAutoTextBackground.h"
 #include <conio.h>
 
+#define APP_AUTO_TEXT_BACKGROUND_FILE_TYPE 1
+
 
 /**
  * @brief Application entry.
@@ -48,6 +50,8 @@ int AppAutoTextBackground::run(int argc, char* argv[])
     printf("-- background process lightness threshold: %d\n", CONFIG_BACKGROUND_PROCESS_LIGHTNESS_THRESHOLD);
 
 
+#if (APP_AUTO_TEXT_BACKGROUND_FILE_TYPE == 0)
+    
     // Step 1: Load scene image
     printf("Step 1: Load scene image\n");
     step_clock_start();
@@ -57,6 +61,29 @@ int AppAutoTextBackground::run(int argc, char* argv[])
     step_clock_stop();
 
     printf("\n");
+
+#elif (APP_AUTO_TEXT_BACKGROUND_FILE_TYPE == 1)
+
+    VideoCapture capture(argv[1]);
+    if (!capture.isOpened())
+    {
+        return -1;
+    }
+
+    Mat sceneFrame;
+    while (capture.read(sceneFrame))
+    {
+        // Step 1: Load scene frame
+        printf("Step 1: Load scene frame\n");
+        step_clock_start();
+
+        Mat sceneImage = sceneFrame;
+
+        step_clock_stop();
+
+        printf("\n");
+
+#endif
 
 
     // Step 2: Put text onto the reference image
@@ -151,7 +178,7 @@ int AppAutoTextBackground::run(int argc, char* argv[])
     }
 
     Mat featherTemplate_blur;
-    blur(featherTemplate, featherTemplate_blur, cvSize(21, 21));
+    blur(featherTemplate, featherTemplate_blur, cvSize(31, 31));
 
     step_clock_stop();
     
@@ -273,6 +300,15 @@ int AppAutoTextBackground::run(int argc, char* argv[])
     
     imshow("sceneImage_text", sceneImage_text);
     
+
+#if (APP_AUTO_TEXT_BACKGROUND_FILE_TYPE == 1)
+
+    cvWaitKey(1);
+
+    }
+
+#endif
+
 
     cvWaitKey();
     return EXIT_SUCCESS;
