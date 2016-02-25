@@ -32,6 +32,9 @@
     <Filter Include="Applications\AppRoadDetection">
       <UniqueIdentifier>{127b9a34-443f-4f20-8422-d9212c70bad0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Applications\AppAutoTextBackground">
+      <UniqueIdentifier>{82272485-c8e3-45b6-99e9-24d915492fa4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -58,6 +61,9 @@
     <ClInclude Include="Applications\AppRoadDetection\AppRoadDetection.h">
       <Filter>Applications\AppRoadDetection</Filter>
     </ClInclude>
+    <ClInclude Include="Applications\AppAutoTextBackground\AppAutoTextBackground.h">
+      <Filter>Applications\AppAutoTextBackground</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -83,6 +89,9 @@
     </ClCompile>
     <ClCompile Include="Applications\AppRoadDetection\AppRoadDetection.cpp">
       <Filter>Applications\AppRoadDetection</Filter>
+    </ClCompile>
+    <ClCompile Include="Applications\AppAutoTextBackground\AppAutoTextBackground.cpp">
+      <Filter>Applications\AppAutoTextBackground</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

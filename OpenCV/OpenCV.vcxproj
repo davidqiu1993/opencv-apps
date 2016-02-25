@@ -86,6 +86,7 @@
   <ItemGroup>
     <ClCompile Include="Applications\App.cpp" />
     <ClCompile Include="Applications\AppAR\AppAR.cpp" />
+    <ClCompile Include="Applications\AppAutoTextBackground\AppAutoTextBackground.cpp" />
     <ClCompile Include="Applications\AppExample\AppExample.cpp" />
     <ClCompile Include="Applications\AppFeatureDetector\AppFeatureDetector.cpp" />
     <ClCompile Include="Applications\AppReadImage\AppReadImage.cpp" />
@@ -96,6 +97,7 @@
   <ItemGroup>
     <ClInclude Include="Applications\App.h" />
     <ClInclude Include="Applications\AppAR\AppAR.h" />
+    <ClInclude Include="Applications\AppAutoTextBackground\AppAutoTextBackground.h" />
     <ClInclude Include="Applications\AppExample\AppExample.h" />
     <ClInclude Include="Applications\AppFeatureDetector\AppFeatureDetector.h" />
     <ClInclude Include="Applications\AppReadImage\AppReadImage.h" />
