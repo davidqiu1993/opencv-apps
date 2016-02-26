@@ -46,7 +46,7 @@ int AppAutoTextBackground::run(int argc, char* argv[])
     const int CONFIG_BACKGROUND_FEATHER_MARGIN = -16;
     printf("-- background feather margin: %d\n", CONFIG_BACKGROUND_FEATHER_MARGIN);
 
-    const uchar CONFIG_BACKGROUND_PROCESS_LIGHTNESS_THRESHOLD = 72;
+    const uchar CONFIG_BACKGROUND_PROCESS_LIGHTNESS_THRESHOLD = 128;
     printf("-- background process lightness threshold: %d\n", CONFIG_BACKGROUND_PROCESS_LIGHTNESS_THRESHOLD);
 
 

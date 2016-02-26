@@ -18,8 +18,8 @@ class AppAutoTextBackground: public App
 {
 public:
     AppAutoTextBackground() :
-        DO_SHOW_INTERNAL_STEP_IMAGES(true),
-        DO_SHOW_REFERENCE_IMAGE(true) { ; }
+        DO_SHOW_INTERNAL_STEP_IMAGES(false),
+        DO_SHOW_REFERENCE_IMAGE(false) { ; }
 
     int run(int argc, char* argv[]);
 
